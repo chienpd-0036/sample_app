@@ -1,0 +1,16 @@
+<% provide :title, t("static_pages.about.title") %>
+<h1> <%= t "static_pages.about.title" %> </h1>
+<p>
+  <%= t "static_pages.about.sentence_1" %>
+  <em><%= link_to t("static_pages.about.link_1"),
+    "https://www.railstutorial.org/" %></em>
+    <%= t "static_pages.about.sentence_2" %>
+  <%= link_to t("static_pages.about.link_2"),
+    "https://www.railstutorial.org/book" %>
+    <%= t "static_pages.about.sentence_3" %>
+  <%= link_to t("static_pages.about.link_3"),
+  "http://screencasts.railstutorial.org/" %>
+  <%= t "static_pages.about.sentence_4" %>
+  <%= link_to t("static_pages.about.link_4"), "http://rubyonrails.org/" %>.
+  <%= t "static_pages.about.sentence_5" %>
+</p>
