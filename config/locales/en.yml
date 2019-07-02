@@ -34,12 +34,26 @@ en:
     application:
       title: |
         | Ruby on Rails Tutorial Sample App
+      link_to_1: "sample app"
+      link_to_2: "Home"
+      link_to_3: "Help"
+      link_to_4: "Log in"
+      link_to_5: "About"
+      link_to_6: "Contact"
+      sentence_0: "The"
+      link_1: "Ruby on Rails Tutorial"
+      sentence_1: "by"
+      link_2: "Michael Hartl"
+      link_3: "News"
 
     home:
       title: "Sample App"
+      sentence_0: "Welcome to the Sample App"
       sentence_1: "This is the home page for the"
       link_1: "Ruby on Rails Tutorial"
       sentence_2: "sample application."
+      link_to_1: "Sign up now!"
+      link_to_2: "Rails logo"
 
     help:
       title: "Help"
@@ -65,3 +79,7 @@ en:
       title:  "Contact"
       sentence_1: "Contact the Ruby on Rails Tutorial about the sample app at the"
       link_1: "contact page"
+
+    signup:
+      header: "Sign up"
+      sentence: "This will be a signup page for new users."
