@@ -1,0 +1,6 @@
+check_user:
+  name_max_length: 50
+  mail_max_length: 255
+  pass_min_length: 6
+user:
+  avatar_size: 80
