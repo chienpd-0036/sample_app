@@ -2,4 +2,5 @@ check_user:
   name_max_length: 50
   mail_max_length: 255
   pass_min_length: 6
-  validate_email_regex: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
+user:
+  avatar_size: 80

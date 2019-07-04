@@ -83,3 +83,10 @@ en:
     signup:
       header: "Sign up"
       sentence: "This will be a signup page for new users."
+
+  user:
+    success_signup: "Welcome to the Sample App!"
+    not_found: "User not found!"
+    error_message: "The form contains"
+    confirm: "Confirmation"
+    create: "Create my account"
