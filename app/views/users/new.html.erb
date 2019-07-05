@@ -1,5 +1,5 @@
-<% provide :title, t("static_pages.signup.header") %>
-<h1><%= t "static_pages.signup.header" %></h1>
+<% provide :title, t(".header") %>
+<h1><%= t ".header" %></h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -15,10 +15,10 @@
       <%= f.label :password %>
       <%= f.password_field :password, class: "form-control" %>
 
-      <%= f.label :password_confirmation, t("user.confirm") %>
+      <%= f.label :password_confirmation, t(".confirm") %>
       <%= f.password_field :password_confirmation, class: "form-control" %>
 
-      <%= f.submit t("user.create"), class: "btn btn-primary" %>
+      <%= f.submit t(".create_submit"), class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

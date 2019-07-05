@@ -1,51 +1,28 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  static_pages:
-    application:
-      title: |
-        | Ruby on Rails Tutorial Sample App
-      link_to_1: "sample app"
-      link_to_2: "Home"
-      link_to_3: "Help"
-      link_to_4: "Log in"
-      link_to_5: "About"
-      link_to_6: "Contact"
+  layouts:
+    header:
+      sample_app: "Sample App"
+      home: "Home"
+      help: "Help"
+      user: "User"
+      profile: "Profile"
+      setting: "Setting"
+      logout: "Log out"
+      login: "Log in"
+      account: "Account"
+    footer:
       sentence_0: "The"
       link_1: "Ruby on Rails Tutorial"
       sentence_1: "by"
+      about: "About"
+      contact: "Contact"
       link_2: "Michael Hartl"
       link_3: "News"
+    application:
+      title: |
+        | Ruby on Rails Tutorial Sample App
 
+  static_pages:
     home:
       title: "Sample App"
       sentence_0: "Welcome to the Sample App"
@@ -54,7 +31,6 @@ en:
       sentence_2: "sample application."
       link_to_1: "Sign up now!"
       link_to_2: "Rails logo"
-
     help:
       title: "Help"
       sentence_1: "Get help on the Ruby on Rails Tutorial at the"
@@ -62,9 +38,8 @@ en:
       sentence_2: "To get help on this sample app, see the"
       link_2: "Ruby on Rails Tutorial"
       sentence_3: "book"
-
     about:
-      title:  "About"
+      title: "About"
       sentence_1: "The"
       link_1: "Ruby on Rails Tutorial"
       sentence_2: "is a"
@@ -74,19 +49,28 @@ en:
       sentence_4: "to teach web development with"
       link_4: "Ruby on Rails"
       sentence_5: "This is the sample application for the tutorial."
-
     contact:
-      title:  "Contact"
+      title: "Contact"
       sentence_1: "Contact the Ruby on Rails Tutorial about the sample app at the"
       link_1: "contact page"
 
-    signup:
+  users:
+    new:
       header: "Sign up"
       sentence: "This will be a signup page for new users."
+      confirm: "Confirmation"
+      create_submit: "Create my account"
+      error_message: "The form contains"
+    create:
+      success_signup: "Welcome to the Sample App!"
+    show:
+      not_found: "User not found!"
 
-  user:
-    success_signup: "Welcome to the Sample App!"
-    not_found: "User not found!"
-    error_message: "The form contains"
-    confirm: "Confirmation"
-    create: "Create my account"
+  sessions:
+    new:
+      header: "Log in"
+      submit: "Log in"
+      sign_up_now: "Sign up now!"
+      sentence_1: "New user?"
+    create:
+      invalid_pass: "Invalid email/password combination"
