@@ -72,5 +72,6 @@ en:
       submit: "Log in"
       sign_up_now: "Sign up now!"
       sentence_1: "New user?"
+      remember_me: "Remember me on this computer"
     create:
       invalid_pass: "Invalid email/password combination"
