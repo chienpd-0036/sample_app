@@ -4,3 +4,7 @@ check_user:
   pass_min_length: 6
 user:
   avatar_size: 80
+all_user:
+  avatar_size: 50
+paginate: 10
+remember: 1
