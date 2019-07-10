@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
+  before_action :load_user, except: %i(index new create)
   before_action :logged_in_user, except: %i(new create show)
   before_action :correct_user, only: %i(edit update)
-  before_action :load_user, except: %i(index new create)
   before_action :admin_user, only: :destroy
 
   def index
-    @users = User.all.page(params[:page]).per Settings.paginate
+    @users = User.page(params[:page]).per Settings.paginate
   end
 
   def new
@@ -16,18 +16,15 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      log_in @user
-      flash[:success] = t ".success_signup"
+      @user.send_activation_email
+      flash[:info] = t ".checkmail_please"
       redirect_to @user
     else
       render :new
     end
   end
 
-  def show
-    return if @user
-    redirect_to root_url
-  end
+  def show; end
 
   def edit; end
 
@@ -36,13 +33,19 @@ class UsersController < ApplicationController
       flash[:success] = t ".update_success"
       redirect_to @user
     else
+      flash[:danger] = t ".update_fail"
       render :edit
     end
   end
 
   def destroy
-    @user.destroy
-    flash[:success] = t ".deleted"
+    if @user.admin?
+      flash[:danger] = t ".cant_delete_admin"
+    elsif @user.destroy
+      flash[:success] = t ".deleted"
+    else
+      flash[:danger] = t ".delete_failed"
+    end
     redirect_to users_url
   end
 
@@ -61,7 +64,6 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    @user = User.find_by id: params[:id]
     return if current_user? @user
     flash[:danger] = t ".incorrect_user"
     redirect_to root_url
@@ -73,7 +75,9 @@ class UsersController < ApplicationController
 
   def load_user
     @user = User.find_by id: params[:id]
+
     return if @user
     flash[:danger] = t ".not_found"
+    redirect_to root_path
   end
 end

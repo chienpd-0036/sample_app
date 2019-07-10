@@ -20,14 +20,23 @@ class SessionsController < ApplicationController
   private
 
   def login_check user
-    log_in user
-    session[:remember_me] == Settings.remember ? remember(user) : forget(user)
-    flash[:success] = t ".admin" if current_user.admin?
-    redirect_back_or user
+    if user.activated?
+      log_in user
+      session[:remember_me] == Settings.remember ? remember(user) : forget(user)
+      flash[:success] = t ".admin" if current_user.admin?
+      redirect_back_or user
+    else
+      activate_require
+    end
   end
 
   def login_fail
     flash.now[:danger] = t ".invalid_pass"
     render :new
+  end
+
+  def activate_require
+    flash[:warning] = t ".checkmail_please"
+    redirect_to root_url
   end
 end

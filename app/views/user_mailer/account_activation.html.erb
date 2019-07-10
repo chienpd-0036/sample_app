@@ -1,0 +1,10 @@
+<h1><%= t ".title" %></h1>
+
+<p><%= t ".hi" %> <%= @user.name %>,</p>
+
+<p>
+  <%= t ".sentence_1" %>
+</p>
+
+<%= link_to t(".activate_link"),
+  edit_account_activation_url(@user.activation_token, email: @user.email) %>
