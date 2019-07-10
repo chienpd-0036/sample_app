@@ -1,4 +1,5 @@
 en:
+  max_image_size: "should be less than 5MB"
   layouts:
     header:
       sample_app: "Sample App"
@@ -31,6 +32,7 @@ en:
       sentence_2: "sample application."
       link_to_1: "Sign up now!"
       link_to_2: "Rails logo"
+      sentence_3: "Micropost Feed"
     help:
       title: "Help"
       sentence_1: "Get help on the Ruby on Rails Tutorial at the"
@@ -70,6 +72,7 @@ en:
       checkmail_please: "Please check your email to get the activation link."
     show:
       not_found: "User not found!"
+      microposts: "Microposts"
     edit:
       header: "Edit user"
       title: "Update your profile"
@@ -95,6 +98,17 @@ en:
       delete: "delete"
       confirm: "You sure?"
 
+  microposts:
+    create:
+      created: "Micropost created!"
+    destroy:
+      deleted: "Micropost deleted"
+    micropost:
+      posted: "Posted"
+      ago: "ago"
+      delete: "delete"
+      sure: "You sure?"
+
   sessions:
     new:
       header: "Log in"
@@ -110,6 +124,13 @@ en:
       admin: "Login by admin!"
       checkmail_please: "Account not activated. Check your email for the activation link."
 
+  shared:
+    micropost_form:
+      compose: "Compose new micropost..."
+      post: "Post"
+      alert_max_size: "Maximum file size is 5MB. Please choose a smaller file."
+    user_info:
+      view_my_info: "view my profile"
   account_activations:
     edit:
       activated: "Account activated!"
@@ -127,8 +148,7 @@ en:
       sentence_1: "To reset your password click the link below:"
       reset_link: "Reset password"
       sentence_2: "This link will expire in two hours."
-      sentence_3: "If you did not request your password to be reset, please ignore this email and
-your password will stay as it is."
+      sentence_3: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
 
   password_resets:
     new:
