@@ -100,6 +100,7 @@ en:
       header: "Log in"
       email: "Email"
       password: "Password"
+      forgot_password: "(forgot password)"
       remember_me: "Remember me on this computer"
       submit: "Log in"
       sign_up_now: "Sign up now!"
@@ -121,3 +122,29 @@ en:
       hi: "Hi"
       sentence_1: "Welcome to the Sample App! Click on the link below to activate your account:"
       activate_link: "Activate"
+    password_reset:
+      reset_password: "Password reset"
+      sentence_1: "To reset your password click the link below:"
+      reset_link: "Reset password"
+      sentence_2: "This link will expire in two hours."
+      sentence_3: "If you did not request your password to be reset, please ignore this email and
+your password will stay as it is."
+
+  password_resets:
+    new:
+      title: "Forgot password"
+      email: "Email"
+      submit: "Submit"
+    create:
+      email_send: "Email sent with password reset instructions"
+      email_not_found: "Email address not found"
+    edit:
+      title: "Reset password"
+      password: "Password"
+      not_found: "User not found !"
+      password_confirmation: "Confirmation"
+      submit: "Update password"
+    update:
+      cant_empty: "can't be empty"
+      reset: "Password has been reset."
+      pass_expired: "Password reset has expired."
