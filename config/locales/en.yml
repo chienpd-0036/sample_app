@@ -67,6 +67,7 @@ en:
       error_message: "The form contains"
     create:
       success_signup: "Welcome to the Sample App!"
+      checkmail_please: "Please check your email to get the activation link."
     show:
       not_found: "User not found!"
     edit:
@@ -79,6 +80,7 @@ en:
       incorrect_user: "Incorrect User"
     update:
       update_success: "Profile updated"
+      update_fail: "Profile update fail"
     form:
       name: "Name"
       email: "Email"
@@ -86,6 +88,9 @@ en:
       password_confirmation: "Password confirmation"
     destroy:
       deleted: "User deleted"
+      cant_delete_admin: "Can't delete other admin"
+      delete_failed: "Delete user failed!"
+      not_found: "User not found!"
     user:
       delete: "delete"
       confirm: "You sure?"
@@ -102,3 +107,17 @@ en:
     create:
       invalid_pass: "Invalid email/password combination"
       admin: "Login by admin!"
+      checkmail_please: "Account not activated. Check your email for the activation link."
+
+  account_activations:
+    edit:
+      activated: "Account activated!"
+      invalid_link: "Invalid activation link"
+      not_found: "User not found!"
+
+  user_mailer:
+    account_activation:
+      activation: "Account activation"
+      hi: "Hi"
+      sentence_1: "Welcome to the Sample App! Click on the link below to activate your account:"
+      activate_link: "Activate"
