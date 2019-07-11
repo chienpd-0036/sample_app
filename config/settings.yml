@@ -8,3 +8,4 @@ all_user:
   avatar_size: 50
 paginate: 10
 remember: "1"
+password_reset_expired: 2
