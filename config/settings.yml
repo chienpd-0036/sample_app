@@ -7,5 +7,11 @@ user:
 all_user:
   avatar_size: 50
 paginate: 10
+post_page: 10
 remember: "1"
 password_reset_expired: 2
+micropost:
+  content_max_length: 140
+  image_width: 400
+  image_height: 400
+  image_max_size: 5
