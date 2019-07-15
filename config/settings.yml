@@ -15,3 +15,5 @@ micropost:
   image_width: 400
   image_height: 400
   image_max_size: 5
+follow:
+  avatar_size: 30

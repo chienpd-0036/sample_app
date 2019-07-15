@@ -73,6 +73,7 @@ en:
     show:
       not_found: "User not found!"
       microposts: "Microposts"
+      login_please: "Please log in"
     edit:
       header: "Edit user"
       title: "Update your profile"
@@ -97,6 +98,39 @@ en:
     user:
       delete: "delete"
       confirm: "You sure?"
+    follow:
+      submit: "Follow"
+    unfollow:
+      submit: "Unfollow"
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
+    show_follow:
+      view_my_profile: "view my profile"
+      microposts: "Microposts"
+
+  microposts:
+    create:
+      created: "Micropost created!"
+    destroy:
+      deleted: "Micropost deleted"
+    micropost:
+      posted: "Posted"
+      ago: "ago"
+      delete: "delete"
+      sure: "You sure?"
+
+  microposts:
+    create:
+      created: "Micropost created!"
+    destroy:
+      deleted: "Micropost deleted"
+    micropost:
+      posted: "Posted"
+      ago: "ago"
+      delete: "delete"
+      sure: "You sure?"
 
   microposts:
     create:
@@ -131,6 +165,10 @@ en:
       alert_max_size: "Maximum file size is 5MB. Please choose a smaller file."
     user_info:
       view_my_info: "view my profile"
+    stats:
+      following: "following"
+      followers: "followers"
+
   account_activations:
     edit:
       activated: "Account activated!"
