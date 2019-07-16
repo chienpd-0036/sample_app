@@ -12,5 +12,6 @@ module SampleApp
       ENV[key.to_s] = value
       end if File.exists? env_file
     end
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end

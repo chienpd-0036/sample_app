@@ -3,6 +3,10 @@ class Micropost < ApplicationRecord
 
   scope :create_desc, ->{order(created_at: :desc)}
   scope :user_posts, ->(id){where(user_id: id)}
+  feeds = lambda do |user|
+    where user_id: user.following_ids << user.id
+  end
+  scope :feeds, feeds
 
   mount_uploader :picture, PictureUploader
 
